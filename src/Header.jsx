@@ -17,8 +17,11 @@ const Header = () => {
       </Link>
       
       <nav className="header-nav">
+        <Link to="/" className={location.pathname === '/' ? 'active-nav' : ''}>
+          Home
+        </Link>
         <Link to="/products" className={location.pathname === '/products' ? 'active-nav' : ''}>
-          Browse Plants
+          Plants
         </Link>
         <Link to="/cart" className="cart-icon-container">
           <ShoppingCart size={24} color="#1b4332" />
