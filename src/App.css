@@ -1,0 +1,84 @@
+/* Home page background and core layout */
+.home-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Outfit', sans-serif;
+}
+
+.home-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/assets/nursery_background_1774299948498.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  animation: zoomFade 10s infinite alternate;
+}
+
+@keyframes zoomFade {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.home-content {
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 50px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.home-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.home-content p {
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.btn-start {
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: #95d5b2;
+  color: #1b4332;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-start:hover {
+  background: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.about-us-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  line-height: 1.8;
+  color: #333;
+}
